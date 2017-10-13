@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail && cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+java -cp cljs.jar:src clojure.main build.clj
