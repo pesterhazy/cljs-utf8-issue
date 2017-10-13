@@ -28,6 +28,8 @@ $ isutf8 out/main.js
 out/main.js: line 272, char 1, byte offset 217: invalid UTF-8 code
 ```
 
+You can easily compile moreutils 0.59 from git.
+
 However, isutf8 1.2 from moreutils 0.61 think it's ok:
 
 ```
