@@ -3,4 +3,4 @@ set -euo pipefail && cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 mkdir -p out
 
-closure-library/closure/bin/build/closurebuilder.py --root=closure-library --root=js-src --namespace=hello --output_mode=compiled --compiler_jar=compiler-latest/closure-compiler-v20170910.jar -f "--charset UTF-8"
+closure-library/closure/bin/build/closurebuilder.py --root=closure-library --root=js-src --namespace=hello --output_mode=compiled --compiler_jar=compiler-latest/closure-compiler-v20170910.jar -f "--charset UTF-8" > out/hello-app.js
