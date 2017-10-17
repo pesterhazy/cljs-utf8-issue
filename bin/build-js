@@ -1,3 +1,17 @@
 #!/usr/bin/env bash
 
-java -jar compiler-latest/closure-compiler-v20170910.jar --js 'closure-library/closure/goog/**.js' --js '*_test.js' --js js-src --closure_entry_point my.hello --manage_closure_dependencies --only_closure_dependencies --js_output_file out/output.js --charset utf-8
+set -euo pipefail
+
+set -x
+
+# curl -fsSLo compiler.zip http://dl.google.com/closure-compiler/compiler-20170910.zip
+# curl -fsSLo library.zip https://github.com/google/closure-library/archive/v20170910.zip
+
+rm -rf closure-library-20170910 compiler
+
+mkdir compiler
+
+unzip -q compiler.zip -d compiler
+unzip -q library.zip
+
+java -jar compiler/closure-compiler-v20170910.jar --js 'closure-library-20170910/closure/goog/**.js' --js '*_test.js' --js js-src --closure_entry_point my.hello --manage_closure_dependencies --only_closure_dependencies --js_output_file out/output.js --charset utf-8
