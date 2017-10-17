@@ -16,6 +16,8 @@ The changelog for moreutils 0.60 mentions the UTF-8 problem (non-problem?): http
 bin/build-js
 ```
 
+Output in [output.js](out/output.js).
+
 # Output
 
 Output on macOS 10.12
